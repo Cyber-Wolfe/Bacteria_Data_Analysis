@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belly Button Biodiversity</title>
+    <link 
+    rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    >
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+    <style>
+      .jumbotron {
+        background-image: url("static/bacteria.jpg");
+        background-size: cover;}
+        </style>
+  </head>
+
+<body >
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+      <div class="col-md-8">
+        <p>
+          "Bacteria, the carbohydrate of the microscopic world. Are they good? Are they bad? Depends on the point of view of some and location of said bacteria some would say. Bacteria are a part of soil, water, radioactive waste, humans, animals, and many of objects and entities of the planet. Bacteria do live in symbiotic or even parasitic relationships with animals and plants and with that known, many bacteria have not been characterised and plenty can't be grown in a lab which gives our data more clarity when an example just says 'Bacteria'.Humans and many other animals carry millions of bacteria though, mostly in the gut, and there are many on the skin. The bacteria in and on the body are harmless or rendered so by the protective effects of the immune system. Although many are beneficial, particularly the ones in the gut, which gives good digestive health and regular bowel movements for humans. The charts below detail bacteria that is found specifically in the belly button area, a spot notoriously overlooked when bathing, here we can see a breakdown of certain identified bacteria categorized in different ways!"
+
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  
+
+</body>
+
+</html>
